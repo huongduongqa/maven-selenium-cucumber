@@ -1,7 +1,7 @@
 @register
 Feature: Register new account into NopEcommerce System
 
-  @fea1
+  @fea2
   Scenario Outline: Register Successfully with valid infomation
     Given Click Register link
     When Input into FirstName textbox with value "<FirstName>"
@@ -13,6 +13,7 @@ Feature: Register new account into NopEcommerce System
     Then Verify Register Sucessful Message displays
 
    Examples: 
-   | FirstName | Lastname | Email          | Password | Confirm Password | 
-   | Mark      | Anthony  | a@gmail.com | abc123   | abc123           | 
-  
+   | FirstName | Lastname | Email           | Password | Confirm Password | 
+   | Hellen    | Mur      | b@gmail.com | abc123   | abc123           | 
+   
+      

@@ -3,10 +3,9 @@ package stepDefinitions;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
 import cucumberOptions.Hooks;
-
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import pageObjects.user.PageGeneratorManager;
 import pageObjects.user.RegisterPageObject;
 import utilities.DataHelper;
@@ -28,37 +27,37 @@ public class RegisterPageSteps {
 		password = confirmPass = helper.getPassword();
 	}
 	
-	@When("^Input to Lastname textbox with value \"([^\"]*)\"$")
+	@When("^Input into Lastname textbox with value \"([^\"]*)\"$")
 	public void inputToLastnameTextboxWithValue(String lastName)  {
 	   registerPage.inputToLastnameTextbox(lastName);
 	}
 
-	@When("^Input to Firstname textbox with value \"([^\"]*)\"$")
+	@When("^Input into FirstName textbox with value \"([^\"]*)\"$")
 	public void inputToFirstnameTextboxWithValue(String firstName)  {
 	   registerPage.inputToFirstnameTextbox(firstName);
 	}
 
-	@When("^Input to Email textbox with value \"([^\"]*)\"$")
+	@When("^Input into Email textbox with value \"([^\"]*)\"$")
 	public void inputToEmailTextboxWithValue(String email) {
 	   registerPage.inputToEmailTextbox(email);
 	}
 
-	@When("^Input to Password textbox with value \"([^\"]*)\"$")
+	@When("^Input into Password textbox with value \"([^\"]*)\"$")
 	public void inputToPasswordTextboxWithValue(String password)  {
 	   registerPage.inputToPasswordTextbox(password);
 	}
 
-	@When("^Input to ConfirmPassword textbox with value \"([^\"]*)\"$")
+	@When("^Input into Confirm Password textbox with value \"([^\"]*)\"$")
 	public void inputToConfirmPasswordTextboxWithValue(String confirmPass)  {
 	   registerPage.inputToConfirmPasswordTextbox(confirmPass);
 	}
 
-	@When("^Click To Register button$")
+	@When("^Click Register button$")
 	public void clickToRegisterButton() {
 	   registerPage.clickToRegisterButton();
 	}
 
-	@Then("^Message of Successful Register displays$")
+	@Then("^Verify Register Sucessful Message displays$")
 	public void messageOfSuccessfulRegisterDisplays()  {
 	   Assert.assertEquals(registerPage.getRegisterSuccessMessage(), "Your registration completed");
 	}

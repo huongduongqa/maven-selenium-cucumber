@@ -12,9 +12,9 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.UnreachableBrowserException;
 
-import variables.*;
-import cucumber.api.java.Before;
+import io.cucumber.java.Before;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import variables.GlobalConstants;
 
 public class Hooks {
 	// Run for many thread
@@ -22,7 +22,7 @@ public class Hooks {
 	private static final Logger log = Logger.getLogger(Hooks.class.getName());
 
 	@Before // synchronized = handle đồng bộ
-	public synchronized static WebDriver openAndQuitBrowser() {
+	public static synchronized WebDriver openAndQuitBrowser() {
 		// Run by Maven command line lấy browser name ra
 		String browser = System.getProperty("BROWSER");
 		System.out.println("Browser name run by command line = " + browser);
@@ -38,7 +38,7 @@ public class Hooks {
 					browser = System.getenv("BROWSER");
 					if (browser == null) {
 						// Set default browser
-						browser = " chrome";
+						browser = "firefox";
 					}
 				}
 

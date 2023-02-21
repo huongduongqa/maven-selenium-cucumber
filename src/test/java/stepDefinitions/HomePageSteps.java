@@ -3,10 +3,9 @@ package stepDefinitions;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
 import cucumberOptions.Hooks;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import pageObjects.user.HomePageObject;
 import pageObjects.user.PageGeneratorManager;
 
@@ -20,7 +19,7 @@ public class HomePageSteps {
 		homePage = PageGeneratorManager.getHomePage(driver);
 	}
 	
-	@Given("^Open Register page$")
+	@Given("^Click Register link$")
 	public void openRegisterPage() {
 	    homePage.openRegisterPage();
 	}

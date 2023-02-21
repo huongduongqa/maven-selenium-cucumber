@@ -3,9 +3,9 @@ package stepDefinitions;
 import org.openqa.selenium.WebDriver;
 
 import commons.CommonPageObject;
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
 import cucumberOptions.Hooks;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import pageObjects.user.PageGeneratorManager;
 
 public class CommonPageSteps  {

@@ -81,10 +81,10 @@ public class RegisterPageObject extends BasePage {
 
 	@Step("Click to Register button")
 	public HomePageObject clickToRegisterButton() {
+		System.out.println("Huong Duong Thread ID: "+Thread.currentThread());
 		waitForElementClickable(driver, RegisterPageUI.REGISTER_BUTTON);
 		clickToElement(driver, RegisterPageUI.REGISTER_BUTTON);
 		return PageGeneratorManager.getHomePage(driver);
-		
 	}
 	
 	public String getRegisterSuccessMessage() {

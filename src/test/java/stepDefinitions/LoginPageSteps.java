@@ -2,9 +2,8 @@ package stepDefinitions;
 
 import org.openqa.selenium.WebDriver;
 
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
 import cucumberOptions.Hooks;
+import io.cucumber.java.en.When;
 import pageObjects.user.LoginPageObject;
 import pageObjects.user.PageGeneratorManager;
 

@@ -1,7 +1,7 @@
 @login_facebook
 Feature: Register and Login
   
-  @no-param 
+  @no-param
   Scenario: Register and Login into system
     Given Open facebook application
     When Input to username textbox 
